@@ -24,12 +24,28 @@ function changeText(){
 let i =0;
 
 function show(){
-    let student = arr[i];
-    for(let x in student){
-       const text = document.createElement('p');
-       text.innerHTML =x+":"+student[x]
-       info.appendChild(text)
+    for(i;i<arr.length; i++){
+        let student = arr[i];
+        for(let x in student){
+           const text = document.createElement('p');
+           text.innerHTML = x+":"+student[x]
+           info.appendChild(text)
+        }
     }
-i++;
+}
 
+
+const findInp = document.querySelector('#inputSearch');
+const findbtn = document.querySelector('#search');
+const UserInfo = document.querySelector('#user')
+
+function findUser(){
+   let User =  arr.find((element)=>{
+        return element.email==findInp.value;
+    })
+    for(let x in User){
+        const text = document.createElement('p');
+       text.innerHTML = x+":"+User[x]
+        UserInfo.appendChild(text)
+     }
 }
