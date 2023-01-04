@@ -9,24 +9,19 @@
 </head>
 <body>
  
-<div class="register">
+<div class="register" >
     <input type="text" name="" id="name" >
+    <label id="error-username"></label>
     <input type="text" id="firstName">
+    <label id="error-firstName"></label>
     <input type="number" id="age">
+    <label id="error-age"></label>
     <input type="text" id="email">
-    <button onclick="createTodo()">submit</button>
-    
+    <label id="error-email"></label>
+    <input id="submit"  type="submit" value="submit ">
 </div>
+  
     
-    <div class="info"></div>
-
-    <div class="search">
-        <input type="text" id="inputSearch">
-        <button id="search" onclick="findUser()"> search</button>
-    </div>
-   
-    <div id="user"> </div>
-
-    <script src="./app.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 </html>
