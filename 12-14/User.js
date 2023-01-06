@@ -1,9 +1,10 @@
 export default  class user {
-    constructor(id,username,lastName,age,email){
+    constructor(id,username,password,age,email){
         this.id = id
         this.username = username,
-        this.lastName = lastName,
+        this.password = password,
         this.age = age,
-        this.email = email
+        this.email = email,
+        this.vaild = false
     }
 }

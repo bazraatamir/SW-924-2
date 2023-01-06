@@ -1,7 +1,7 @@
 import user from './User.js';
 const btn = document.querySelector('#submit');
-const lastName  = document.querySelector("#name");
-const firstName  = document.querySelector("#firstName");
+const password  = document.querySelector("#name");
+const username = document.querySelector("#firstName");
 const age  = document.querySelector("#age");
 const email  = document.querySelector("#email");
 
@@ -15,13 +15,14 @@ function getId(){
     }
     return id;
 }
+
 let arr = [];
 btn.addEventListener('click',register)
 function register(){
 let id = getId();
-let Students = new                                user(id,firstName.value,lastName.value,age.value,email.value);
+let Students = new                                user(id,username.value,password.value,age.value,email.value);
 saveLocalStorage(Students);
-// window.location.href='/login.html';
+window.location.href='/login.html';
 }
 
 function saveLocalStorage(arg){
