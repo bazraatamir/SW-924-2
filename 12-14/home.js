@@ -7,5 +7,15 @@ window.addEventListener('load',()=>{
     console.log(user)
     const username = document.querySelector('#user')
     username.innerText =`${user.username}` 
+    let posts =JSON.parse(localStorage.getItem('posts'))
+    posts.forEach(element => {
+      const image = document.createElement('img');
+      let url = URL.createObjectURL(element.image);
+      console.log(url)
+    image.src =url ;
+     const body = document.querySelector('body');
+     body.appendChild(image)
+    });
+    
 });
 

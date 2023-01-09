@@ -9,19 +9,16 @@ login.addEventListener('click',log)
   function  log(){
     let users = JSON.parse(localStorage.getItem('students'));
      user = users.findIndex(element => {
-           if(username.value==element.username && password.value==element.password){
-           
-               window.location.href='/home.html';
-            return element
-           }else{
-               alert('faild');
-           }
-          
-       });
-       console.log(user)
-    users[user].vaild=true
-       localStorage.setItem('students',JSON.stringify(users))
-    
+          return (username.value==element.username && password.value==element.password)
+        })
+
+    if(user!==-1){
+        users[user].vaild=true
+        localStorage.setItem('students',JSON.stringify(users))
+        window.location.href='/home.html';
+    }else{
+        alert('faild');
+    }
    };
 
 
