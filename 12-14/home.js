@@ -10,8 +10,7 @@ window.addEventListener('load',()=>{
     let posts =JSON.parse(localStorage.getItem('posts'))
     posts.forEach(element => {
       const image = document.createElement('img');
-      let url = URL.createObjectURL(element.image);
-      console.log(url)
+      let url = user.image
     image.src =url ;
      const body = document.querySelector('body');
      body.appendChild(image)
